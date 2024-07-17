@@ -1,0 +1,35 @@
+// colors
+$white: #fff;
+$lightGray: #F2F2F2;
+$darkGray: #9A9A9A;
+$primaryColor: #1F2F55;
+$textColor: #151515;
+$hoverColor: #32519B;
+
+// font-family
+$zen: 'ZenMaru', sans-serif;
+$segoe: 'Segoe', sans-serif;
+$mont: 'Montserrat', sans-serif;
+
+// gap
+$gap: 10px;
+$gapHalf: $gap / 2;
+
+// breakpoints
+$breakpoints: (
+  mobile-xs: 374px,
+  mobile-sm: 767px,
+  tablet-xs: 1023px,
+  tablet-sm: 1199px,
+  laptop-xs: 1479px
+);
+@mixin breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Invalid breakpoint `#{$name}`.";
+  }
+  @else {
+    @media screen and (max-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../styles/main';
+
+.section__title {
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.images {
+  margin-bottom: 60px;
+  align-items: center;
+  column-gap: $gap;
+
+  &1 {
+    width: calc(25% - $gapHalf);
+  }
+
+  &2 {
+    width: calc(50% - $gap);
+  }
+
+  &3 {
+    width: calc(25% - $gapHalf);
+  }
+}
+
+.wrap {
+  justify-content: center;
+  gap: $gap;
+}
+
+.reviews {
+  background-color: $lightGray;
+  border-radius: 12px;
+  flex: 0 0 calc(100% / 12 * 5 - $gapHalf);
+  justify-content: center;
+  align-items: center;
+  column-gap: 80px;
+
+  &__item {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 18px;
+  }
+
+  &__number {
+    width: 84px;
+    height: 84px;
+    border-radius: 10px;
+    background-color: $white;
+    justify-content: center;
+    align-items: center;
+    font-family: $zen;
+    font-size: 40px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+}
+
+.right {
+  padding: 109px 30px 40px;
+  background: url('../../icons/handshake.svg') no-repeat 30px 30px, $lightGray;
+  border-radius: 12px;
+  flex: 0 0 calc(100% / 12 * 3 - $gapHalf);
+
+  &__title {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/main';
+
+.section {
+  background: url('../../images/fullScreenHead.png') no-repeat 50% 100% / 70vh, $darkGray;
+  background-attachment: fixed;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &__title {
+    color: $white;
+    font-family: $zen;
+    text-transform: uppercase;
+    font-size: 9.2vw;
+  }
+}

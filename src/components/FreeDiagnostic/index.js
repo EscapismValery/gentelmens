@@ -1,0 +1,1 @@
+export { FreeDiagnostic } from './FreeDiagnostic';

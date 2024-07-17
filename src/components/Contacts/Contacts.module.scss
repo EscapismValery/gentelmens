@@ -1,0 +1,50 @@
+@import '../../styles/main';
+
+.top {
+  margin-bottom: 30px;
+  gap: $gap;
+
+  &__left {
+    flex: 0 0 calc(100% / 16 * 10 - $gapHalf);
+  }
+
+  &__right {
+    flex: 0 0 calc(100% / 16 * 6 - $gapHalf);
+  }
+}
+
+.wrap {
+  gap: $gap;
+}
+
+.imgCont {
+  flex: 0 0 calc(100% / 16 * 10 - $gapHalf);
+  min-height: 100%;
+  border-radius: 0 12px 12px 0;
+  background: url('../../images/contactsBack.jpg') no-repeat 80% 100% / cover;
+  background-attachment: fixed;
+}
+
+.contacts {
+  flex: 0 0 calc(100% / 16 * 6 - $gapHalf);
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: $gap;
+
+  &__item {
+    &Wrap {
+      flex-direction: column;
+      align-items: end;
+      flex: 0 0 calc(100% / 6 * 4);
+    }
+
+    padding: 30px;
+    flex: 0 1 calc(100% / 3 - $gap * 2 / 3);
+    background-color: $lightGray;
+    border-radius: 12px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+}

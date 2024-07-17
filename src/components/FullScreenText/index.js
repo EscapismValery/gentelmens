@@ -1,0 +1,1 @@
+export { FullScreenText } from './FullScreenText';

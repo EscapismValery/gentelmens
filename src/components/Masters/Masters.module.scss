@@ -1,0 +1,100 @@
+@import '../../styles/main';
+
+.section {
+  padding-left: $gap;
+  padding-right: $gap;
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.masters {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: $gap;
+}
+
+.master {
+  cursor: pointer;
+
+  & .svgBack {
+    transition: fill .6s ease;
+  }
+
+  & .svgArrow {
+    transition: stroke .6s ease;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+    position: relative;
+    height: 526px;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      transition: opacity .6s ease-out;
+    }
+
+    &Prev {
+      opacity: 1;
+    }
+
+    &Hover{
+      opacity: 0;
+    }
+
+    & svg {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 4px;
+  }
+
+  &__pos {
+    margin-bottom: 20px;
+  }
+
+  &__direction {
+    &List {
+      gap: $gap;
+      flex-wrap: wrap;
+    }
+
+    &Item {
+      padding: 10px;
+      background-color: $lightGray;
+      border-radius: 6px;
+      color: $darkGray;
+    }
+  }
+
+  &:hover {
+    & .master__imgPrev {
+      opacity: 0;
+    }
+
+    & .master__imgHover {
+      opacity: 1;
+    }
+
+    & .svgBack {
+      fill: $primaryColor;
+    }
+
+    & .svgArrow {
+      stroke: $white;
+    }
+  }
+}

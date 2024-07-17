@@ -1,0 +1,41 @@
+@import '../../styles/main';
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__container {
+    position: relative;
+    max-width: 1687px; // 1607 + paddings
+    padding: 0 40px;
+    margin: 0 auto;
+
+    @include breakpoint(tablet-sm) {
+      padding: 0 20px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.nav {
+  justify-content: space-between;
+
+  &__list {
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  &__link {
+    transition: color .3s ease;
+
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import '../../styles/main';
+
+.section {
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: $gap;
+  row-gap: 30px;
+}
+
+.product {
+  cursor: pointer;
+
+  & .svgBack {
+    transition: fill .3s ease;
+    fill: $primaryColor;
+  }
+
+  & .svgArrow {
+    transition: stroke .3s ease;
+    stroke: $white;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+    padding-top: 11px;
+    padding-left: 22px;
+    position: relative;
+    height: 232px;
+    background-color: $lightGray;
+    border-radius: 15px;
+    transition: padding .3s ease, margin .3s ease;
+
+    & img {
+      max-height: 100%;
+    }
+
+    & svg {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: $primaryColor;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    max-width: 85%;
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+    max-width: 85%;
+  }
+
+  &__direction {
+    &List {
+      gap: $gap;
+      flex-wrap: wrap;
+    }
+
+    &Item {
+      padding: 10px;
+      background-color: $lightGray;
+      border-radius: 6px;
+      color: $darkGray;
+    }
+  }
+
+  &:hover {
+    & .svgBack {
+      fill: $white;
+    }
+
+    & .svgArrow {
+      stroke: $primaryColor;
+    }
+
+    & .product__img {
+      margin-bottom: 14px;
+      padding-left: 34px;
+    }
+  }
+}

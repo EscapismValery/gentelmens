@@ -1,0 +1,35 @@
+@import '../../styles/main';
+
+.section {
+  background: url('../../icons/bigLogoText.svg') no-repeat 50% calc(50% + 30px);
+}
+
+.wrap {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+  width: calc(100% / 12 * 8);
+}
+
+.content {
+  padding-top: 100px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+    max-width: 389px;
+  }
+}
+
+.imgCont {
+  max-width: 399px;
+  max-height: 550px;
+
+  & img {
+    border-radius: 12px;
+  }
+}
