@@ -1,0 +1,1 @@
+export { TopBarberInfo } from './TopBarberInfo';

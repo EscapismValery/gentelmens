@@ -17,20 +17,29 @@ const SalonReviews = () => {
           <ul className={`${styles.reviews} list-reset flex`}>
             <li className={`${styles.reviews__item} flex`}>
               <span className={`${styles.reviews__number} flex`}>5.0</span>
-              <h4 className={`${styles.reviews__company} title`}>Flamp</h4>
-            </li>
-            <li className={`${styles.reviews__item} flex`}>
-              <span className={`${styles.reviews__number} flex`}>5.0</span>
-              <h4 className={`${styles.reviews__company} title`}>Google</h4>
+              <h4 className={`${styles.reviews__company} title`}>2ГИС</h4>
             </li>
             <li className={`${styles.reviews__item} flex`}>
               <span className={`${styles.reviews__number} flex`}>5.0</span>
               <h4 className={`${styles.reviews__company} title`}>Яндекс</h4>
             </li>
+            <li className={`${styles.reviews__item} flex`}>
+              <span className={`${styles.reviews__number} flex`}>5.0</span>
+              <h4 className={`${styles.reviews__company} title`}>Flamp</h4>
+            </li>
+            <li className={`${styles.reviews__item} flex`}>
+              <span className={`${styles.reviews__number} flex`}>5.0</span>
+              <h4 className={`${styles.reviews__company} title`}>Zoon</h4>
+            </li>
+            <li className={`${styles.reviews__item} flex`}>
+              <span className={`${styles.reviews__number} flex`}>5.0</span>
+              <h4 className={`${styles.reviews__company} title`}>Google</h4>
+            </li>
           </ul>
           <div className={`${styles.right}`}>
-            <h3 className={`${styles.right__title} title`}>Нам доверяют</h3>
-            <p className={`${styles.right__descr} text-primary`}>Назови три любых мужских прически и получи бесплатную диагностику кожи головы</p>
+            <h3 className={`${styles.right__title} title`}>Выбирайте нас</h3>
+            <p className={`${styles.right__descr} text-primary`}>Шампунь от выпадения волос и бороды fasfasfasfafafasdfasdf</p>
+            <button className={`${styles.right__btn} btn-reset btn text-primary`}>Записаться к нам</button>
           </div>
         </div>
       </div>

@@ -42,9 +42,9 @@ const MainPage = () => {
         benefits={aboutUsBenefits}
       />
       <ServicesDemo />
-      <Masters />
-      <FreeDiagnostic />
-      <BenefitsNewService />
+      <Masters isSlider={true}/>
+      {/* <FreeDiagnostic /> */}
+      {/* <BenefitsNewService /> */}
       <Gallery />
       <FullScreenText />
       <ShopDemo />

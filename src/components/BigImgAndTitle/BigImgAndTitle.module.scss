@@ -1,0 +1,19 @@
+@import '../../styles/main';
+
+.block {
+  padding-top: 30px;
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.center {
+  &__head {
+    background: url('../../images/aboutUs/hero.png') no-repeat 50% 100%, $lightGray;
+    border-radius: 12px;
+    min-height: 905px;
+    width: 100%;
+  }
+}

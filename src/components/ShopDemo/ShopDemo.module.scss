@@ -1,9 +1,29 @@
 @import '../../styles/main';
 
-.section {
-  &__title {
-    margin-bottom: 30px;
-    text-align: center;
+.top {
+  margin-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    @include gradientText();
+
+    align-items: center;
+    column-gap: 14px;
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    & svg {
+      margin-top: 4px;
+      transition: transform .3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
   }
 }
 
@@ -45,6 +65,15 @@
       position: absolute;
       right: 20px;
       bottom: 20px;
+      transition: transform .1s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1.03);
+      }
     }
   }
 
@@ -56,7 +85,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
-    color: $primaryColor;
+    color: $textColor;
   }
 
   &__name {

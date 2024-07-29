@@ -1,5 +1,6 @@
 import styles from './Hero.module.scss';
 import circle from '../../images/circle.png';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -55,7 +56,8 @@ const Hero = () => {
             </div>
             <div className={`${styles.center__bottom} flex`}>
               <p className={`${styles.center__descr} text-primary`}>Тут будет наш текст, который будет призывать к стрижке, уникальный текст для пользователей</p>
-              <button className={`${styles.center__btn} btn-reset btn text-primary`}>Подобрать&nbsp;услугу</button>
+              <Link to={'/services'} className={`${styles.center__btn} btn-reset btn text-primary`}>Подобрать&nbsp;услугу</Link>
+              {/* <button className={`${styles.center__btn} btn-reset btn text-primary`}>Подобрать&nbsp;услугу</button> */}
             </div>
           </div>
           <div className={`${styles.bottom} flex`}>

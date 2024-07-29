@@ -1,0 +1,122 @@
+@import '../../styles/main';
+
+.footer {
+  padding-top: 80px;
+  padding-bottom: 176px;
+  background-color: $lightGray;
+
+  &__container {
+    gap: 85px;
+  }
+
+  &__copy {
+    margin-top: 15px;
+  }
+
+  &__info {
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
+.nav {
+  &__link {
+    transition: color .3s ease;
+
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+}
+
+.socials {
+  margin-bottom: 40px;
+  gap: $gap;  
+
+  &__link {
+    & svg {
+      @include breakpoint(mobile-sm) {
+        width: 50px;
+        height: 50px;
+      }
+
+      & rect {
+        transition: fill .3s ease;
+      }
+
+      & path {
+        transition: fill .3s ease;
+      }
+    }
+
+    &_telegram {
+      &:hover {
+        & svg rect {
+          fill: #2FADE7;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_vk {
+      &:hover {
+        & svg rect {
+          fill: #4E9EFF;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_youtube {
+      &:hover {
+        & svg rect {
+          fill: #FF0000;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_dzen {
+      &:hover {
+        & svg rect {
+          fill: #959595;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_odnoklass {
+      &:hover {
+        & svg rect {
+          fill: #EF8024;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

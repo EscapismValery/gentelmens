@@ -1,0 +1,176 @@
+@import '../../styles/main';
+
+.section {
+  background: url('../../icons/bigLogoText.svg') no-repeat 50% 100%;
+}
+
+.wrap {
+  padding-right: 109px;
+  padding-left: 73px;
+  align-items: center;
+  column-gap: 37px;
+}
+
+.content {
+  margin-top: -100px;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 507px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+  }
+
+  &__btns {
+    margin-bottom: 30px;
+    gap: $gap;
+  }
+
+  &__link {
+    position: relative;
+    padding: 22px !important;
+    cursor: pointer;
+    border: 1px dashed #CFCFCF;
+    border-radius: 10px;
+    background: transparent;
+    transition: all .3s ease;
+
+    & span {
+      @include gradientText();
+      z-index: 2;
+      position: relative;
+    }
+
+    &:hover {
+      text-shadow: 0px 0px 0px rgba(255, 255, 255, .95);
+
+      &:before {
+        left: -1px;
+        top: -1px;
+        bottom: -1px;
+        right: -1px;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 100%;
+      top: 100%;
+      bottom: 100%;
+      right: 100%;
+      z-index: 1;
+      border-radius: 10px;
+      transition: all .3s ease;
+
+      background: $primaryColor;
+      background: $gradientColor;
+    }
+  }
+}
+
+.socials {
+  margin-bottom: 40px;
+  gap: $gap;  
+
+  &__link {
+    & svg {
+      border:1px solid #CFCFCF;
+      border-radius: 50%;
+      transition: border-color .3s ease;
+
+      & rect {
+        transition: fill .3s ease;
+      }
+
+      & path {
+        transition: fill .3s ease;
+      }
+    }
+
+    &:hover {
+      & svg {
+        border-color: transparent;
+      }
+    }
+
+    &_telegram {
+      &:hover {
+        & svg rect {
+          fill: #2FADE7;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_vk {
+      &:hover {
+        & svg rect {
+          fill: #4E9EFF;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_youtube {
+      &:hover {
+        & svg rect {
+          fill: #FF0000;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_dzen {
+      &:hover {
+        & svg rect {
+          fill: #959595;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &_odnoklass {
+      &:hover {
+        & svg rect {
+          fill: #EF8024;
+        }
+
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+.img {
+  height: 728px;
+  width: 715px;
+
+  & img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

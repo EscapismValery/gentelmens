@@ -13,7 +13,13 @@
     flex: 0 1 calc(50% - $gapHalf);
   }
 
+  &__descrs {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
   &__content {
+
     padding-left: 60px;
     padding-right: 80px;
     flex: 0 1 calc(50% - $gapHalf);
@@ -43,11 +49,12 @@
   }
 
   &__value {
+    @include gradientText();
+
     font-family: $zen;
     font-size: 60px;
     line-height: 140%;
     font-weight: 700;
-    color: $primaryColor;
   }
 }
 

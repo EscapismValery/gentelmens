@@ -1,0 +1,1 @@
+export { BigImgAndTitle } from './BigImgAndTitle';

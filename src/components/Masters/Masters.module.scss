@@ -12,20 +12,13 @@
 
 .masters {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: $gap;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: $gap;
+  row-gap: 40px;
 }
 
 .master {
   cursor: pointer;
-
-  & .svgBack {
-    transition: fill .6s ease;
-  }
-
-  & .svgArrow {
-    transition: stroke .6s ease;
-  }
 
   &__img {
     margin-bottom: 20px;
@@ -51,10 +44,26 @@
       opacity: 0;
     }
 
-    & svg {
+    &Btns {
       position: absolute;
+      left: 20px;
       right: 20px;
       bottom: 20px;
+      column-gap: 19px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &Btn {
+      flex-grow: 1;
+    }
+
+    & svg {
+      // position: absolute;
+      // right: 20px;
+      // bottom: 20px;
+      transition: transform .3s ease, box-shadow .3s ease;
+      border-radius: 50%;
     }
   }
 
@@ -89,12 +98,9 @@
       opacity: 1;
     }
 
-    & .svgBack {
-      fill: $primaryColor;
-    }
-
-    & .svgArrow {
-      stroke: $white;
+    & svg {
+      transform: translateY(-20px);
+      box-shadow: 0px 0px 10px 0px rgba($color: $primaryColor, $alpha: 0.2);
     }
   }
 }

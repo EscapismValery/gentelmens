@@ -12,7 +12,7 @@ const FreeDiagnostic = () => {
               <input className={`${styles.form__field} text-primary`} type="text" name='haircut1' placeholder='Первая стрижка' required/>
               <input className={`${styles.form__field} text-primary`} type="text" name='haircut2' placeholder='Вторая стрижка' required/>
               <input className={`${styles.form__field} text-primary`} type="text" name='haircut3' placeholder='Третяя стрижка' required/>
-              <input className={`${styles.form__btn} btn-reset btn text-primary`} type='submit' value='Подтвердить'/>
+              <button className={`${styles.form__btn} btn-reset btn text-primary`} type='submit'>Подтвердить</button>
             </form>
           </div>
           <div className={styles.img}></div>          

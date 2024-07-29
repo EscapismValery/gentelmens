@@ -43,6 +43,14 @@ const AboutUs = ({title, descr, benefits}) => {
         <h2 className={`${styles.section__title} title-main`}>{title?.slice(0, state?.length)}</h2>
         <div className={`${styles.section__content} flex`}>
           {descr && 
+            Array.isArray(descr) 
+            ?
+            <div className={`${styles.section__descrs} flex`}>
+              {descr.map((item, index) => 
+                <p className={`${styles.section__descr} text-primary`} id={index}>{item}</p>
+              )}
+            </div>
+            :
             <p className={`${styles.section__descr} text-primary`}>{descr}</p>
           }
           {benefits &&
