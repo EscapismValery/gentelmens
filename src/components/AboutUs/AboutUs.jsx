@@ -68,7 +68,6 @@ const AboutUs = ({title, descr, benefits}) => {
       <div className={`${styles.sliderRun}`}>
         <Swiper
           spaceBetween={10}
-          slidesPerView={7}
           loop={true}
           speed={6000}
           allowTouchMove={false}
@@ -77,6 +76,17 @@ const AboutUs = ({title, descr, benefits}) => {
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1440: {
+              slidesPerView: 7,
+            }
+          }}
         >
           <SwiperSlide>
             <div className={`${styles.slideRun} flex`}>

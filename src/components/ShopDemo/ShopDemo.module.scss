@@ -5,12 +5,24 @@
   justify-content: space-between;
   align-items: center;
 
+  @include breakpoint(mobile-sm) {
+    justify-content: center;
+  }
+
+  &Center {
+    justify-content: center;
+  }
+
   &__link {
     @include gradientText();
 
     align-items: center;
     column-gap: 14px;
     transition: opacity .3s ease;
+
+    @include breakpoint(mobile-sm) {
+      display: none !important;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -24,6 +36,16 @@
     &:hover svg {
       transform: translateX(4px);
     }
+
+    &Bottom {
+      display: none;
+
+      @include breakpoint(mobile-sm) {
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+      }
+    }
   }
 }
 
@@ -32,6 +54,14 @@
   grid-template-columns: repeat(6, 1fr);
   column-gap: $gap;
   row-gap: 30px;
+
+  @include breakpoint(laptop-xs) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint(mobile-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .product {
@@ -57,6 +87,10 @@
     border-radius: 15px;
     transition: padding .3s ease, margin .3s ease;
 
+    @include breakpoint(mobile-sm) {
+      padding-left: 0;
+    }
+
     & img {
       max-height: 100%;
     }
@@ -64,11 +98,21 @@
     & svg {
       position: absolute;
       right: 20px;
-      bottom: 20px;
+      top: 20px;
       transition: transform .1s ease;
+
+      @include breakpoint(mobile-sm) {
+        transform: scale(0.9);
+        top: 10px;
+        right: 10px;
+      }
 
       &:hover {
         transform: scale(1.1);
+
+        @include breakpoint(mobile-sm) {
+          transform: scale(1);
+        }
       }
 
       &:active {
@@ -78,14 +122,11 @@
   }
 
   &__price {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-family: $mont;
+    font-family: $zen;
+    color: $textColor;
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
-    color: $textColor;
   }
 
   &__name {
@@ -124,6 +165,10 @@
     & .product__img {
       margin-bottom: 14px;
       padding-left: 34px;
+
+      @include breakpoint(mobile-sm) {
+        padding-left: 5px;
+      }
     }
   }
 }

@@ -25,6 +25,10 @@
     position: relative;
     height: 526px;
 
+    @include breakpoint(mobile-sm) {
+      height: 396px;
+    }
+
     & img {
       position: absolute;
       top: 0;

@@ -1,0 +1,13 @@
+@import '../../styles/main';
+
+.section {
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap;
+}

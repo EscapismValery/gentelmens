@@ -5,35 +5,132 @@
   padding-bottom: 30px;
 
   &__container {
-    position: relative;
-    max-width: 1380px; // 1260 + paddings
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 60px;
+
+    @include breakpoint(laptop-xs) {
+      padding: 0 40px;
+    }
 
     @include breakpoint(tablet-sm) {
       padding: 0 20px;
     }
   }
 
-  &__logo {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
+  &__wrap {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // &__logo {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
+
+  &__cta {
+    column-gap: 30px;
+
+    @include breakpoint(laptop-xs) {
+      display: none !important;
+    }
+
+    &Left {
+      position: relative;
+      align-items: center;
+      column-gap: $gap;
+    }
+
+    &Item {
+      border: 1px dashed #CFCFCF;
+
+      &:hover {
+        border-color: $hoverColor;
+      }
+    }
+
+    &Number {
+      padding: 12px 10px;
+      border-radius: 6px;
+    }
+
+    &Btn {
+      padding: 11px;
+      border-radius: 50px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: border-color .3s ease;
+
+      & svg path {
+        transition: fill .3s ease;
+      }
+
+      &:hover {
+        svg path {
+          fill: $hoverColor;
+        }
+      }
+    }
+
+    &Contacts {
+      z-index: 5;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 255px;
+      padding: 20px;
+      font-style: normal;
+      background-color: #fff;
+      border: 1px dashed #CFCFCF;
+      border-radius: 6px;
+      flex-direction: column;
+      row-gap: 20px;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: opacity .3s ease, transform .3s ease;
+
+      &_active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &Title {
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-position: 100% 70%;
+        background-size: 19px;
+
+        &Address {
+          background-image: url('../../icons/footer/gps.svg');
+        }
+
+        &Time {
+          background-image: url('../../icons/footer/time.svg');
+        }
+      }
+
+      &Descr {
+        font-size: 14px;
+      }
+    }
   }
 
   &__btn {
     align-items: center;
     column-gap: 10px;
-
-    &:hover { 
-
-    }
   }
 }
 
 .nav {
   justify-content: space-between;
+
+  @include breakpoint(laptop-xs) {
+    display: none !important;
+  }
 
   &__list {
     column-gap: 24px;
@@ -41,10 +138,49 @@
   }
 
   &__link {
-    transition: color .3s ease;
+    transition: all .3s ease;
 
     &:hover {
       color: $hoverColor;
     }
   }
 }
+
+// .basket {
+//   position: absolute;
+//   top: calc(100% + 20px);
+//   right: 0;
+//   width: 46px;
+//   height: 46px;
+//   justify-content: center;
+//   align-items: center;
+//   border: 1px dashed #CFCFCF;
+//   border-radius: 50px;
+//   background-color: transparent;
+//   cursor: pointer;
+//   transition: transform .1s ease;
+
+//   &:hover {
+//     transform: scale(1.1);
+//   }
+
+//   &.active {
+//     border-color: $primaryColor;
+//   }
+
+//   &__count {
+//     position: absolute;
+//     padding: 5px;
+//     top: -10px;
+//     right: -8px;
+//     display: block;
+//     background-color: $hoverColor;
+//     color: #fff;
+//     min-width: 22px;
+//     height: 22px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 50px;
+//   }
+// }

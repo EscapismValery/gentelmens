@@ -7,10 +7,19 @@
     margin-bottom: 78px !important;
     justify-content: space-between;
     column-gap: $gap;
+
+    @include breakpoint(laptop-xs) {
+      margin-bottom: 50px !important;
+      flex-direction: column;
+    }
   }
 
   &__title {
     flex: 0 1 calc(50% - $gapHalf);
+
+    @include breakpoint(laptop-xs) {
+      margin-bottom: 30px;
+    }
   }
 
   &__descrs {
@@ -19,18 +28,30 @@
   }
 
   &__content {
-
     padding-left: 60px;
     padding-right: 80px;
     flex: 0 1 calc(50% - $gapHalf);
     flex-direction: column;
     justify-content: space-between;
     row-gap: 30px;
+
+    @include breakpoint(laptop-xs) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
 .benefits {
   justify-content: space-between;
+
+  @include breakpoint(laptop-xs) {
+    justify-content: start;
+  }
+
+  @include breakpoint(mobile-sm) {
+    flex-direction: column;
+  }
 
   &__item {
     flex-direction: column;
@@ -38,13 +59,33 @@
     row-gap: 10px;
     flex: 0 0 calc(100% / 3);
 
+    @include breakpoint(laptop-xs) {
+      flex: 0 1 auto;
+    }
+
+    @include breakpoint(mobile-sm) {
+      row-gap: 0;
+    }
+
     &:not(:last-child) {
       padding-right: 20px;
       border-right: 1px solid #CFCFCF;
+
+      @include breakpoint(mobile-sm) {
+        padding-right: 0;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-right: 0;
+        border-bottom: 1px solid #CFCFCF;
+      }
     }
 
     &:not(:first-child) {
       padding-left: 20px;
+
+      @include breakpoint(mobile-sm) {
+        padding-left: 0;
+      }
     }
   }
 
@@ -55,6 +96,10 @@
     font-size: 60px;
     line-height: 140%;
     font-weight: 700;
+
+    @include breakpoint(mobile-sm) {
+      font-size: 50px;
+    }
   }
 }
 

@@ -1,0 +1,46 @@
+@import '../../styles/main';
+
+.testdrive {
+  position: relative;
+  margin-bottom: 100px;
+  padding-top: 15px;
+
+  @include breakpoint(tablet-sm) {
+		margin-bottom: 60px;
+  }
+
+  &__wrap {
+    z-index: 1;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px dashed #CFCFCF;
+    border-radius: 12px;
+    max-width: 713px;
+    background: url('../../images/test-drive.png') no-repeat calc(100% - 20px) 100%, #fff;
+
+    &:before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      top: calc(50% + 3px);
+      left: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px dashed #CFCFCF;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    max-width: 412px;
+
+    & span {
+      font-weight: 700;
+      color: #37AB24;
+    }
+  }
+}
+

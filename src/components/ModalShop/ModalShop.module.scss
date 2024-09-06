@@ -1,0 +1,256 @@
+@import '../../styles/main';
+
+.modal {
+  z-index: 50;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+
+  &_active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__content {
+    position: relative;
+    padding: 40px 40px 0px;
+    border: 1px solid #CFCFCF;
+    border-radius: 12px;
+    max-width: 673px;
+    max-height: 95vh;
+    overflow-y: auto;
+    transform: scale(.5);
+    transition: transform .3s ease;
+    justify-content: space-between;
+    // align-items: center;
+    background: url('../../icons/bigLogoTextModal.svg') no-repeat 50% 100% / contain, #fff;
+
+    &_active {
+      transform: scale(1);
+    }
+  }
+
+  &__info,
+  &__form {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 70%;
+  }
+
+  &__price {
+    margin-bottom: 32px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $lightGray;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    padding: 10px;
+    border: 1px dashed #CFCFCF;
+    background-color: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color .3s ease;
+
+    &:hover {
+      border-color: $primaryColor;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 114px;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__total {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    column-gap: 20px;
+    border-bottom: 1px dashed #CFCFCF;
+  }
+
+  &__memo {
+    margin-bottom: 40px;
+    padding-left: 90px;
+    background: url('../../icons/memo.svg') no-repeat 0% 50% / 70px;
+
+    &Title {
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    &Text {
+      & b {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.product {
+  &s {
+    margin-bottom: 20px;
+    padding: 30px;
+    border: 1px solid #CFCFCF;
+    border-radius: 12px;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  gap: 20px;
+  justify-content: space-between;
+  
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #CFCFCF;
+  }
+
+  &__info {
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 210px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    width: 76px;
+    height: 128px;
+    background-color: $lightGray;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: flex-end;
+
+    & img {
+      height: 90%;
+      width: 90%;
+      object-fit: contain;
+    }
+  }
+
+  &__settings {
+    flex-direction: column;
+    justify-content: space-between;
+
+    &Top {
+      align-items: center;
+      justify-content: space-between;
+      gap: $gap;
+    }
+
+    &Bottom {
+      align-items: center;
+      justify-content: space-between;
+      column-gap: $gap;
+    }
+
+    &Btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 39px;
+      height: 39px;
+      background-color: $lightGray;
+      border: none;
+      line-height: 90% !important;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color .2s ease, color .2s ease, transform .1s ease;
+
+      &:hover {
+        background-color: $hoverColor;
+        color: #fff;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &__delete {
+    cursor: pointer;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}
+
+.form {
+  margin-bottom: 70px;
+  flex-direction: column;
+  width: 100%;
+
+  &__title {
+    margin-bottom: 10px;
+    color: $darkGray;
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+
+    & span {
+      margin-left: -5px;
+      font-weight: 700;
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    color: $darkGray;
+  }
+
+  &__input:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__subtext {
+    margin-bottom: 114px;
+    color: $darkGray;
+  }
+}

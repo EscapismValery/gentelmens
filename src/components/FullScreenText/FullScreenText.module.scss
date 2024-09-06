@@ -13,5 +13,13 @@
     font-family: $zen;
     text-transform: uppercase;
     font-size: 9.2vw;
+
+    @include breakpoint(laptop-xs) {
+      font-size: 9vw;
+    }
+
+    @include breakpoint(mobile-sm) {
+      font-size: 8.8vw;
+    }
   }
 }

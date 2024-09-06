@@ -23,8 +23,9 @@ import row4img2 from '../../images/gallery/row4/2.jpg';
 const Gallery = () => {
   return (
     <section className={`${styles.section} flex`}>
-      <div className={`${styles.sliderRun}`}>
+      <div>
         <Swiper
+          className={`${styles.sliderRun} ${styles.sliderRun1}`}
           spaceBetween={10}
           slidesPerView={2}
           loop={true}
@@ -50,8 +51,9 @@ const Gallery = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className={`${styles.sliderRun}`}>
+      <div>
         <Swiper
+          className={`${styles.sliderRun} ${styles.sliderRun2}`}
           spaceBetween={10}
           slidesPerView={3.2}
           loop={true}
@@ -84,8 +86,9 @@ const Gallery = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className={`${styles.sliderRun}`}>
+      <div>
         <Swiper
+          className={`${styles.sliderRun} ${styles.sliderRun3}`}
           spaceBetween={10}
           slidesPerView={3.3}
           loop={true}
@@ -117,8 +120,9 @@ const Gallery = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className={`${styles.sliderRun}`}>
+      <div>
         <Swiper
+          className={`${styles.sliderRun} ${styles.sliderRun4}`}
           spaceBetween={10}
           slidesPerView={2}
           loop={true}

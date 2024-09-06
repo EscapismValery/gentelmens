@@ -1,0 +1,1 @@
+export { MasterInfo } from './MasterInfo';

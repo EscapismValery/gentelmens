@@ -1,0 +1,55 @@
+@import '../../styles/main';
+
+.section {
+  padding-top: 15px;
+  background: url('../../icons/bigLogoText.svg') no-repeat 50% 100%;
+
+  &__container {
+    position: relative;
+    max-width: 1380px; // 1260 + paddings
+    margin: 0 auto;
+    padding: 0 60px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(laptop-xs) {
+      padding: 0 40px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      padding: 0 20px;
+    }
+  }
+}
+
+.wrap {
+  margin: 0 auto;
+  padding-left: 30px;
+  justify-content: space-between;
+  column-gap: 25px;
+}
+
+.content {
+  padding-top: 37px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__level {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 517px;
+  }
+}
+
+.imgCont {
+  & img {
+    border-radius: 12px;
+  }
+}

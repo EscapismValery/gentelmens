@@ -9,6 +9,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -18,6 +19,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -27,6 +29,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -36,6 +39,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -45,6 +49,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -54,6 +59,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -63,6 +69,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -72,6 +79,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -81,6 +89,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -90,6 +99,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -99,6 +109,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
   {
     name: 'Mewalo total black',
@@ -108,6 +119,7 @@ const products = [
     ],
     price: '2500',
     img: shampoo1,
+    href: '/product1',
   },
 ];
 

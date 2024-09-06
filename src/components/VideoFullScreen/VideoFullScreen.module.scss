@@ -3,5 +3,9 @@
 .video {
   width: 100%;
   height: 697px;
-  object-fit: cover
+  object-fit: cover;
+
+  @include breakpoint(mobile-sm) {
+    height: 529px;
+  }
 }

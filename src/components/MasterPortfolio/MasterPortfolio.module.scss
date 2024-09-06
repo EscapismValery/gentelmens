@@ -1,0 +1,23 @@
+@import '../../styles/main';
+
+.section {
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+
+.sliders {
+  flex-direction: column;
+  row-gap: $gap;
+}
+
+.img {
+  border-radius: 12px;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.slide {
+  width: auto !important;
+  // height: 100%;
+}

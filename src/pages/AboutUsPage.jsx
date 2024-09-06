@@ -2,6 +2,7 @@ import { AboutUs } from "../components/AboutUs/AboutUs";
 import { BigImgAndTitle } from "../components/BigImgAndTitle/BigImgAndTitle";
 import { Contacts } from "../components/Contacts/Contacts";
 import { History } from "../components/History/History";
+import { Reviews } from "../components/Reviews/Reviews";
 import { SalonReviews } from "../components/SalonReviews/SalonReviews";
 import { TopBarberInfo } from "../components/TopBarberInfo/TopBarberInfo";
 
@@ -21,6 +22,7 @@ const AboutUsPage = () => {
       <History />
       <TopBarberInfo />
       <SalonReviews />
+      <Reviews />
       <Contacts />
     </>
   );

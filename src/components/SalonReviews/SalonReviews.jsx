@@ -1,17 +1,90 @@
 import styles from './SalonReviews.module.scss';
-import leftImg from '../../images/salon/left.jpg';
-import mainImg from '../../images/salon/main.jpg';
-import rightImg from '../../images/salon/right.jpg';
+import img1 from '../../images/salon/1.jpg';
+import img2 from '../../images/salon/2.jpg';
+import img3 from '../../images/salon/3.jpg';
+import img4 from '../../images/salon/4.jpg';
+import img5 from '../../images/salon/5.jpg';
+import img6 from '../../images/salon/6.jpg';
+import img10 from '../../images/salon/10.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/scss';
+import 'swiper/scss/effect-coverflow';
+import { EffectCoverflow } from 'swiper/modules';
 
 const SalonReviews = () => {
   return (
     <section className={styles.section}>
       <h2 className={`${styles.section__title} subtitle`}>наш салон</h2>
-      <div className={`${styles.images} flex`}>
-        <img className={styles.images1} src={leftImg} alt='Фото салона' />
-        <img className={styles.images2} src={mainImg} alt='Фото салона' />
-        <img className={styles.images3} src={rightImg} alt='Фото салона' />
-      </div>
+      <Swiper
+        className={`${styles.salonSlider}`}
+        effect={'coverflow'}
+        loop={true}
+        grabCursor={true}
+        centeredSlides={true}
+        initialSlide={1}
+        modules={[EffectCoverflow]}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.5,
+            coverflowEffect: {
+              rotate: -50,
+              stretch: 20,
+              depth: 240,
+              modifier: 1,
+              slideShadows: true,
+            }
+          },
+          768: {
+            slidesPerView: 2,
+            coverflowEffect: {
+              rotate: -40,
+              stretch: 20,
+              depth: 200,
+              modifier: 1,
+              slideShadows: true,
+            }
+          },
+          1440: {
+            slidesPerView: 2.2,
+            coverflowEffect: {
+              rotate: -25,
+              stretch: 0,
+              depth: 220,
+              modifier: 1,
+              slideShadows: true,
+            }
+          },
+          1921: {
+            slidesPerView: 2.5,
+            coverflowEffect: {
+              rotate: -25,
+              stretch: 0,
+              depth: 220,
+              modifier: 1,
+              slideShadows: true,
+            }
+          }
+        }}
+      >
+        <SwiperSlide className={`${styles.salonSlide} salonSlide`}>
+          <img src={img1} />
+        </SwiperSlide>
+        <SwiperSlide className={`${styles.salonSlide} salonSlide`}>
+          <img src={img2} />
+        </SwiperSlide>
+        <SwiperSlide className={`${styles.salonSlide} salonSlide`}>
+          <img src={img3} />
+        </SwiperSlide>
+        <SwiperSlide className={`${styles.salonSlide} salonSlide`}>
+          <img src={img4} />
+        </SwiperSlide>
+        <SwiperSlide className={`${styles.salonSlide} salonSlide`}>
+          <img src={img5} />
+        </SwiperSlide>
+        <SwiperSlide className={`${styles.salonSlide} salonSlide`}>
+          <img src={img6} />
+        </SwiperSlide>
+      </Swiper>
       <div className={`container`}>
         <div className={`${styles.wrap} flex`}>
           <ul className={`${styles.reviews} list-reset flex`}>
@@ -36,11 +109,6 @@ const SalonReviews = () => {
               <h4 className={`${styles.reviews__company} title`}>Google</h4>
             </li>
           </ul>
-          <div className={`${styles.right}`}>
-            <h3 className={`${styles.right__title} title`}>Выбирайте нас</h3>
-            <p className={`${styles.right__descr} text-primary`}>Шампунь от выпадения волос и бороды fasfasfasfafafasdfasdf</p>
-            <button className={`${styles.right__btn} btn-reset btn text-primary`}>Записаться к нам</button>
-          </div>
         </div>
       </div>
     </section>

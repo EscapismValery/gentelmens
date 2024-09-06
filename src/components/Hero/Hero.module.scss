@@ -4,16 +4,27 @@
   padding-top: 30px;
 
   &__title {
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     text-align: center;
+
+    @include breakpoint(laptop-xs) {
+      max-width: 729px;
+    }
   }
 }
 
 .wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: $gap;
+
+  @include breakpoint(laptop-xs) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(mobile-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .top {
@@ -66,12 +77,26 @@
 .center {
   grid-area: 1 / 2 / 3 / 4;
 
+  @include breakpoint(laptop-xs) {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+
+  @include breakpoint(mobile-sm) {
+    grid-area: 1;
+  }
+
   &__head {
     margin-bottom: $gap;
     background: url('../../images/head/1.png') no-repeat 50% 100%, $lightGray;
     border-radius: 12px;
     min-height: 605px;
     width: 100%;
+
+    @include breakpoint(mobile-sm) {
+      min-height: 396px;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
   }
 
   &__bottom {
@@ -81,9 +106,21 @@
     column-gap: 20px;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(mobile-sm) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
 
   &__descr {
     max-width: 361px;
+  }
+
+  &__btn {
+    @include breakpoint(mobile-sm) {
+      width: 100%;
+      text-align: center;
+    }
   }
 }

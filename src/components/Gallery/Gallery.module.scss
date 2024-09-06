@@ -6,12 +6,39 @@
 }
 
 .img {
-  border-radius: 12px;
-  min-height: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .slide {
   width: auto !important;
   // height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sliderRun {
+  &1 {
+    height: 542px;
+  }
+
+  &2 {
+    height: 451px;
+  }
+
+  &3 {
+    height: 647px;
+  }
+
+  &4 {
+    height: 451px;
+  }
+
+  @include breakpoint(laptop-xs) {
+    height: 389px;
+  }
+
+  @include breakpoint(mobile-sm) {
+    height: 229px;
+  }
 }

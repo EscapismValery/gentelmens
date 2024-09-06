@@ -11,6 +11,10 @@ import { CertificatesPage } from '../pages/CertificatesPage';
 import { PortfolioPage } from '../pages/PortfolioPage';
 import { MastersPage } from '../pages/MastersPage';
 import { AlexeyMasterPage } from '../pages/masters/AlexeyMasterPage';
+import { ShopPage } from '../pages/ShopPage';
+import { Product1 } from '../pages/products/Product1';
+import { BlogPage } from '../pages/BlogPage';
+import { SecretsOfPerfectStylingPage } from '../pages/articles/SecretsOfPerfectStylingPage';
 
 function App() {
   return (
@@ -29,6 +33,11 @@ function App() {
             <Route path='/portfolio' element={<PortfolioPage />} />
             <Route path='/certificates' element={<CertificatesPage />} />
             <Route path='/contacts' element={<ContactsPage />} />
+            <Route path='/shop' element={<ShopPage />} />
+            <Route path='/product1' element={<Product1 />} />
+
+            <Route path='/blog' element={<BlogPage />} />
+            <Route path='/blog/secrets-of-perfect-styling' element={<SecretsOfPerfectStylingPage />} />
           </Routes>
         </main>
 

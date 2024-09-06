@@ -9,6 +9,7 @@ import { Hero } from "../components/Hero/Hero";
 import { Masters } from "../components/Masters/Masters";
 import { PresentSert } from "../components/PresentSert/PresentSert";
 import { SalonReviews } from "../components/SalonReviews/SalonReviews";
+import { Reviews } from "../components/Reviews/Reviews";
 import { ServicesDemo } from "../components/ServicesDemo/ServicesDemo";
 import { ShopDemo } from "../components/ShopDemo/ShopDemo";
 import { VideoFullScreen } from "../components/VideoFullScreen/VideoFullScreen";
@@ -50,6 +51,7 @@ const MainPage = () => {
       <ShopDemo />
       <PresentSert />
       <SalonReviews />
+      <Reviews />
       <Contacts />
       <CtaImage />
     </>

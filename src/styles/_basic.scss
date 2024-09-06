@@ -76,6 +76,10 @@ img, picture {
 	font-size: 44px;
 	line-height: 140%;
 	text-transform: uppercase;
+
+	@include breakpoint(mobile-sm) {
+		font-size: 24px;
+	}
 }
 
 .subtitle {
@@ -84,6 +88,10 @@ img, picture {
 	font-size: 38px;
 	line-height: 140%;
 	text-transform: uppercase;
+
+	@include breakpoint(mobile-sm) {
+		font-size: 20px;
+	}
 }
 
 .title {
@@ -91,6 +99,10 @@ img, picture {
 	font-weight: 500;
 	font-size: 22px;
 	line-height: 140%;
+
+	@include breakpoint(mobile-sm) {
+		font-size: 16px;
+	}
 }
 
 .text-primary {
@@ -98,6 +110,10 @@ img, picture {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 140%;
+
+	@include breakpoint(mobile-sm) {
+		font-size: 14px;
+	}
 }
 
 // кнопки и ссылки
@@ -109,6 +125,10 @@ img, picture {
 	border-radius: 10px;
 	cursor: pointer;
 	z-index: 1;
+
+	@include breakpoint(mobile-sm) {
+		padding: 18px;
+	}
 
 	&:before {
 		content: "";
@@ -139,3 +159,32 @@ img, picture {
 		color: $hoverColor;
 	}
 }
+
+.input {
+	margin: 0;
+	padding: 18px;
+	border: 1px solid #CFCFCF;
+	border-radius: 6px;
+	color: $textColor;
+
+	&::placeholder {
+		color: $darkGray;
+	}
+
+	&:hover {
+		border-color: $darkGray;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: $textColor;
+	}
+
+	&:valid {
+		border-color: $textColor;
+	}
+}
+
+// .salonSlide.swiper-slide-active {
+// 	width: calc(50% - $gap) !important;
+// }

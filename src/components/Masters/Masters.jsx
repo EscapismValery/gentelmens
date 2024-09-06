@@ -20,11 +20,20 @@ const Masters = ({isSlider}) => {
 
         <Swiper
           spaceBetween={10}
-          slidesPerView={5.5}
           modules={[Mousewheel, FreeMode]}
           mousewheel={true}
           freeMode={true}
-          
+          breakpoints={{
+            0: {
+              slidesPerView: 1.2,
+            },
+            768: {
+              slidesPerView: 2.2,
+            },
+            1440: {
+              slidesPerView: 5.5,
+            }
+          }}
         >
           {mastersInfo.map((item, index) => 
             <SwiperSlide> 

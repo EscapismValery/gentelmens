@@ -9,12 +9,13 @@ const CtaImage = () => {
           <div className={`${styles.content}`}>
             <h2 className={`${styles.content__title} subtitle`}>записаться на стрижку</h2>
             <p className={`${styles.content__descr} text-primary`}>Тут будет наш текст, который будет призывать к стрижке, уникальный текст для пользователей</p>
-            <button className={`${styles.content__btn} btn-reset btn text-primary`}>Записаться</button>
+            <button className={`${styles.content__btn} btn-reset btn text-primary`}>Записаться к нам</button>
           </div>
           <div className={`${styles.imgCont}`}>
             <img src={image} alt="Фото" />
           </div>
         </div>
+        <button className={`${styles.wrap__btn} btn-reset btn text-primary`}>Записаться к нам</button>
       </div>
     </section>
   );

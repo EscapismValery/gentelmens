@@ -6,21 +6,51 @@
   text-align: center;
 }
 
-.images {
+// .images {
+//   margin-bottom: 60px;
+//   align-items: center;
+//   column-gap: $gap;
+
+//   @include breakpoint(mobile-sm) {
+//     border-radius: 10px;
+//     height: 285px;
+//     object-fit: cover;
+//   }
+
+//   &1 {
+//     width: calc(25% - $gapHalf);
+//   }
+
+//   &2 {
+//     width: calc(50% - $gap);
+//   }
+
+//   &3 {
+//     width: calc(25% - $gapHalf);
+//   }
+// }
+
+.salonSlider {
   margin-bottom: 60px;
-  align-items: center;
-  column-gap: $gap;
+}
 
-  &1 {
-    width: calc(25% - $gapHalf);
+.salonSlide {
+  height: 559px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include breakpoint(laptop-xs) {
+    height: 513px;
+  } 
+
+  @include breakpoint(mobile-sm) {
+    height: 285px;
   }
 
-  &2 {
-    width: calc(50% - $gap);
-  }
-
-  &3 {
-    width: calc(25% - $gapHalf);
+  & img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -30,19 +60,39 @@
 }
 
 .reviews {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
+  padding: 62px 65px !important;
   background-color: $lightGray;
   border-radius: 12px;
-  flex: 0 0 calc(100% / 12 * 5 - $gapHalf);
-  justify-content: center;
+  flex: 0 0 calc(100% / 12 * 8 - $gap * 2);
+  justify-content: space-between;
   align-items: center;
   column-gap: 80px;
+
+  @include breakpoint(laptop-xs) {
+    column-gap: 30px;
+  } 
+
+  @include breakpoint(mobile-sm) {
+    padding: 20px 10px !important;
+    flex-direction: column;
+    row-gap: 20px;
+    flex-basis: 100%;
+  }
 
   &__item {
     flex-direction: column;
     align-items: center;
     row-gap: 18px;
+
+    @include breakpoint(mobile-sm) {
+      &:nth-child(2n+1) {
+        margin-left: -35%;
+      }
+
+      &:nth-child(2n) {
+        margin-right: -35%;
+      }
+    }
   }
 
   &__number {
@@ -56,24 +106,9 @@
     font-size: 40px;
     line-height: 140%;
     font-weight: 400;
-  }
-}
 
-.right {
-  padding: 30px;
-  background-color: $lightGray;
-  border-radius: 12px;
-  flex: 0 0 calc(100% / 12 * 3 - $gapHalf);
-
-  &__title {
-    margin-bottom: 10px;
-  }
-
-  &__descr {
-    margin-bottom: 46px;
-  }
-
-  &__btn {
-    width: 100%;
+    @include breakpoint(mobile-sm) {
+      
+    }
   }
 }

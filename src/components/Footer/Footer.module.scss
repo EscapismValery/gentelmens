@@ -2,21 +2,48 @@
 
 .footer {
   padding-top: 80px;
-  padding-bottom: 176px;
-  background-color: $lightGray;
 
-  &__container {
-    gap: 85px;
+  &__logo {
+    margin-top: 6px;
+    margin-bottom: 20px;
+    display: block;
   }
 
-  &__copy {
-    margin-top: 15px;
+  &__top {
+    margin-bottom: 30px;
+    gap: 85px;
+
+    @include breakpoint(laptop-xs) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__bottom {
+    padding-top: 43px;
+    padding-bottom: 43px;
+    border-top: 1px solid #CFCFCF;
+
+    &Wrap {
+      align-items: center;
+      column-gap: 135px;
+
+      @include breakpoint(mobile-sm) {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+      }
+    }
   }
 
   &__info {
     flex-grow: 1;
     justify-content: space-between;
     gap: 40px;
+
+    @include breakpoint(laptop-xs) {
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
@@ -25,7 +52,20 @@
 
   &__list {
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: $gap;
+  }
+
+  &__cta {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__left {
+    &Wrap {
+      margin-bottom: 13px;
+      column-gap: 10px;
+      align-items: center;
+    }
   }
 }
 
@@ -37,10 +77,19 @@
       color: $hoverColor;
     }
   }
+
+  &__title {
+    margin-bottom: 6px;
+    font-family: $segoe;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $darkGray;
+  }
 }
 
 .socials {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   gap: $gap;  
 
   &__link {

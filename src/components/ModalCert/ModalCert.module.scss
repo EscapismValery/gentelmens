@@ -1,0 +1,160 @@
+@import '../../styles/main';
+
+.modal {
+  z-index: 50;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+
+  &_active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__content {
+    position: relative;
+    padding: 40px 40px 60px;
+    border: 1px solid #CFCFCF;
+    border-radius: 12px;
+    width: 1198px;
+    transform: scale(.5);
+    transition: transform .3s ease;
+    justify-content: space-between;
+    align-items: center;
+    background: url('../../icons/bigLogoTextModal.svg') no-repeat 100% 100%, #fff;
+
+    &_active {
+      transform: scale(1);
+    }
+  }
+
+  &__info,
+  &__form {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__info {
+    flex: 0 1 50%;
+  }
+
+  &__form {
+    flex: 0 1 32%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    margin-bottom: 32px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $lightGray;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    flex: 0 1 42%;
+  }
+
+  &__close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 22px;
+    border: 1px dashed #CFCFCF;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: border-color .3s ease;
+
+    & svg {
+      transition: transform .3s ease;
+    }
+
+    &:hover {
+      border-color: $textColor;
+
+      & svg {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+
+.features {
+  margin-bottom: 70px;
+  flex-direction: column;
+  row-gap: 20px;
+
+  &__title {
+    margin-bottom: 10px;
+    color: $darkGray;
+  }
+
+  &__subitems {
+    gap: $gap;
+  }
+
+  &__subitem {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: $lightGray;
+  }
+}
+
+.form {
+  margin-bottom: 70px;
+  flex-direction: column;
+  width: 100%;
+
+  &__title {
+    margin-bottom: 10px;
+    color: $darkGray;
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+    align-items: center;
+    column-gap: 10px;
+
+    & span {
+      margin-left: -5px;
+      font-weight: 700;
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    color: $darkGray;
+  }
+
+  &__input:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__subtext {
+    color: $darkGray;
+  }
+}

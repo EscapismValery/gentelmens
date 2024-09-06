@@ -2,6 +2,15 @@
 
 .section {
   background: url('../../icons/bigLogoText.svg') no-repeat 50% calc(50% + 30px);
+
+  @include breakpoint(laptop-xs) {
+    background-size: contain;
+    background-position: 50% 100%;
+  }
+
+  @include breakpoint(mobile-sm) {
+    background-position: 50% 80%;
+  }
 }
 
 .wrap {
@@ -10,10 +19,33 @@
   align-items: center;
   column-gap: 25px;
   width: calc(100% / 12 * 8);
+
+  @include breakpoint(laptop-xs) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(mobile-sm) {
+    align-items: flex-start;
+  }
+
+  &__btn {
+    display: none;
+
+    @include breakpoint(mobile-sm) {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
 }
 
 .content {
   padding-top: 100px;
+
+  @include breakpoint(laptop-xs) {
+    padding-top: 0;
+  }
 
   &__title {
     margin-bottom: 20px;
@@ -22,6 +54,12 @@
   &__descr {
     margin-bottom: 30px;
     max-width: 389px;
+  }
+
+  &__btn {
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
   }
 }
 

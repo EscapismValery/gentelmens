@@ -2,12 +2,13 @@ import styles from './ShopDemo.module.scss';
 import products from '../../database/shopDemo';
 import { Link } from 'react-router-dom';
 
-const ShopDemo = () => {
+const ShopDemo = ({isDop}) => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={`${styles.top} flex`}>
-        <h2 className={`${styles.section__title} subtitle`}>Магазин</h2>
+        <div className={`${styles.top} ${isDop && styles.topCenter} flex`}>
+          <h2 className={`${styles.section__title} subtitle`}>{isDop ? 'Дополнительные товары' : 'Магазин'}</h2>
+          {!isDop && 
           <Link to={"/shop"} className={`${styles.top__link} flex`}>
             <span className={`text-primary link`}>Смотреть всю продукцию</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,10 +21,11 @@ const ShopDemo = () => {
               </defs>
             </svg>
           </Link>
+          }
         </div>
         <ul className={`${styles.products} list-reset`}>
           {products.map((item, index) => 
-            <li className={`${styles.product}`} id={index}>
+            <Link to={item.href} className={`${styles.product}`} id={index}>
               <div className={`${styles.product__img}`}>
                 <img src={item.img} alt={item.name} />
                 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,18 +43,19 @@ const ShopDemo = () => {
                   </clipPath>
                   </defs>
                 </svg>
-                <span className={`${styles.product__price}`}>{item.price} ₽</span>
               </div>
               <h3 className={`${styles.product__name} title`}>{item.name}</h3>
               <p className={`${styles.product__descr} text-primary`}>{item.descr}</p>
-              <ul className={`${styles.product__directionList} list-reset flex`}>
+              {/* <ul className={`${styles.product__directionList} list-reset flex`}>
                 {item.direction.map((dir, indexDir) => 
                   <li className={`${styles.product__directionItem} text-primary`} id={indexDir}>{dir}</li>
                 )}
-              </ul>
-            </li>
+              </ul> */}
+              <p className={`${styles.product__price}`}>{item.price} ₽</p>
+            </Link>
           )}
         </ul>
+        <Link to={"/shop"} className={`${styles.top__linkBottom} btn text-primary`}>Смотреть всю продукцию</Link>
       </div>
     </section>
   );

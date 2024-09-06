@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
             <div className={`${styles.center__bottom} flex`}>
               <p className={`${styles.center__descr} text-primary`}>Тут будет наш текст, который будет призывать к стрижке, уникальный текст для пользователей</p>
-              <Link to={'/services'} className={`${styles.center__btn} btn-reset btn text-primary`}>Подобрать&nbsp;услугу</Link>
+              <Link to={'/services'} className={`${styles.center__btn} btn-reset btn text-primary`}>Записаться&nbsp;онлайн</Link>
               {/* <button className={`${styles.center__btn} btn-reset btn text-primary`}>Подобрать&nbsp;услугу</button> */}
             </div>
           </div>

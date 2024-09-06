@@ -4,12 +4,26 @@
   justify-content: center;
   align-items: center;
   column-gap: 62px;
+
+  @include breakpoint(laptop-xs) {
+    flex-direction: row-reverse;
+    background: url('../../icons/bigSertText.svg') no-repeat 0 0;
+  }
+
+  @include breakpoint(mobile-sm) {
+    flex-direction: column;
+  }
 }
 
 .content {
   padding: 40px 0 40px;
-  flex: 0 0 571px;
+  flex: 0 1 571px;
   background: url('../../icons/bigSertText.svg') no-repeat 0% 24px;
+
+  @include breakpoint(laptop-xs) {
+    background: none;
+    flex-basis: auto;
+  }
 
   &__title {
     margin-bottom: 20px;
@@ -19,39 +33,14 @@
     margin-bottom: 40px;
     max-width: 483px;
   }
+
+  &__btn {
+    @include breakpoint(mobile-sm) {
+      width: 100%;
+    }
+  }
 }
 
 .img {
   max-width: 372px;
-}
-
-.form {
-  gap: $gap;
-
-  &__field {
-    padding: 16px;
-    padding-right: 38px;
-    width: 190px;
-    border: 1px solid #CFCFCF;
-    border-radius: 6px;
-    transition: border-color .3s ease, background .3s ease;
-
-    &::placeholder {
-      color: $darkGray;
-    }
-
-    &:focus {
-      outline: none;
-      border-color: $darkGray;
-    }
-
-    &:hover {
-      border-color: $darkGray;
-    }
-
-    &:valid {
-      background: url('../../icons/OKform.svg') no-repeat calc(100% - 16px) 50%, #E7F1FC;
-      border-color: #E7F1FC;
-    }
-  }
 }

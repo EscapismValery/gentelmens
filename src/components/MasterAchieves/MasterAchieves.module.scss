@@ -1,0 +1,30 @@
+@import '../../styles/main';
+
+.section {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap;
+  }
+}
+
+.item {
+  padding: 30px;
+  padding-top: 104px;
+  background-repeat: no-repeat;
+  background-position: 30px 30px;
+  background-color: #F2F2F2;
+  border-radius: 12px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__value {
+    @include gradientText();
+  }
+}

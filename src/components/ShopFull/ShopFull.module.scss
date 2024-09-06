@@ -1,0 +1,243 @@
+@import '../../styles/main';
+
+.section {
+  padding-top: 15px;
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__container {
+    position: relative;
+  }
+}
+
+.filter {
+  margin-bottom: 60px;
+  column-gap: $gap;
+  justify-content: center;
+
+  &__btn {
+    position: relative;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: $lightGray;
+    cursor: pointer;
+    z-index: 1;
+    transition: color .3s ease, transform .1s ease;
+
+    &:before {
+      content: "";
+      display: block;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $gradientColor;
+      border-radius: 6px;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    &Active {
+      color: $white;
+
+      &:before{
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      color: $white;
+
+      &:before{
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.top {
+  margin-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    @include gradientText();
+
+    align-items: center;
+    column-gap: 14px;
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    & svg {
+      margin-top: 4px;
+      transition: transform .3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  column-gap: $gap;
+  row-gap: 30px;
+}
+
+.product {
+  cursor: pointer;
+
+  & .svgBack {
+    transition: fill .3s ease;
+    fill: $primaryColor;
+  }
+
+  & .svgArrow {
+    transition: stroke .3s ease;
+    stroke: $white;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+    padding-top: 11px;
+    padding-left: 22px;
+    position: relative;
+    height: 232px;
+    background-color: $lightGray;
+    border-radius: 15px;
+    transition: padding .3s ease, margin .3s ease;
+
+    & img {
+      max-height: 100%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50px;
+    background: url('../../icons/basketTovar.svg') no-repeat 50% 50%, $gradientColor;
+    cursor: pointer;
+    transition: transform .1s ease, background .3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &Active {
+      background: url('../../icons/basketTovarAdded.svg') no-repeat 50% 50%, #508042;
+    }
+  }
+
+  &__price {
+    font-family: $zen;
+    color: $textColor;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    max-width: 85%;
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+    max-width: 85%;
+  }
+
+  &__direction {
+    &List {
+      gap: $gap;
+      flex-wrap: wrap;
+    }
+
+    &Item {
+      padding: 10px;
+      background-color: $lightGray;
+      border-radius: 6px;
+      color: $darkGray;
+    }
+  }
+
+  &:hover {
+    & .svgBack {
+      fill: $white;
+    }
+
+    & .svgArrow {
+      stroke: $primaryColor;
+    }
+
+    & .product__img {
+      margin-bottom: 14px;
+      padding-left: 34px;
+    }
+  }
+}
+
+.basket {
+  &Cont {
+    position: relative;
+  }
+
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 46px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #CFCFCF;
+  border-radius: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform .1s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.active {
+    border-color: $primaryColor;
+  }
+
+  &__count {
+    position: absolute;
+    padding: 5px;
+    top: -10px;
+    right: -8px;
+    display: block;
+    background-color: $hoverColor;
+    color: #fff;
+    min-width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
+}

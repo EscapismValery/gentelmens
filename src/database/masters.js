@@ -72,6 +72,20 @@ const mastersInfo = [
     imgHover: AlexeyImgHover,
     href: '/alexey',
   },
+  {
+    name: 'Алексей Никифоров',
+    level: 'Premium',
+    img: AlexeyImg,
+    imgHover: AlexeyImgHover,
+    href: '/alexey',
+  },
+  {
+    name: 'Алексей Никифоров',
+    level: 'Premium',
+    img: AlexeyImg,
+    imgHover: AlexeyImgHover,
+    href: '/alexey',
+  },
 ]
 
 export default mastersInfo;
